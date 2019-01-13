@@ -19,7 +19,10 @@ RUN wget -qO- https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add
 RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" > /etc/apt/sources.list.d/yarn.list
 RUN wget -qO- https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
 
+# Update apt with new sources
 RUN apt-get update
+
+# Install node & yarn
 RUN apt-get install -yqq nodejs yarn
 
 # Update pip and install pipenv
