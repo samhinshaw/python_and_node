@@ -24,11 +24,3 @@ RUN apt-get install -yqq nodejs yarn
 RUN pip install -U pip && pip install pipenv
 RUN npm i -g npm@^6
 RUN rm -rf /var/lib/apt/lists/*
-
-RUN pip install               \
-  arrow==0.10.0               \
-  bson==0.5.7                 \     
-  myfitnesspal==1.11.0        \
-  pymongo==3.7.2              \
-  python-dateutil==2.6.1      \
-  python-dotenv==0.1.0
