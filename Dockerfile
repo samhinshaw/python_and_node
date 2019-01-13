@@ -21,6 +21,12 @@ RUN wget -qO- https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
 
 RUN apt-get update
 RUN apt-get install -yqq nodejs yarn
+
+# Update pip and install pipenv
 RUN pip install -U pip && pip install pipenv
+
+# Install the latest npm 6.x version
 RUN npm i -g npm@^6
+
+# remove apt lists
 RUN rm -rf /var/lib/apt/lists/*
