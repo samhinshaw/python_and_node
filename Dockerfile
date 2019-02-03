@@ -40,5 +40,6 @@ RUN pip install \
   bson \     
   myfitnesspal \
   pymongo \
+  dnspython \
   python-dateutil \
   python-dotenv
